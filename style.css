@@ -196,20 +196,118 @@ h3
 }
 /* Info */
 
-.HerbergementMarseille
+/* Corps 1 */
+.Corps_1
 {
-    width: 20%;
-    height: 20%;
+    border: solid orange;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
 }
+/* Corps 1 */
 
-.HerbergementPopulaire
+/* Hébergements à Marseille */
+.Section_HM
 {
-    width: 20%;
-    height: 20%;
+    border: solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
+.SectionHébergements
+{
+    border: solid red;  
+}
+#Hébergements
+{
+    font-family: "Raleway_Bold";
+    background-color: yellow;
+}
+.PHM_1
+{
+    border: solid lightgreen;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.PHM_2
+{
+    border: solid lightblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.HM
+{
+    border: solid pink; 
+}
+.HM1, .HM2, .HM3, .HM4, .HM5, .HM6
+{
+    border: solid purple;
+    width: 200px;
+	height: 120px;
+}
+.AfficherPlus
+{
+    font-family: "Raleway_Bold";
+}
+/* Hébergements à Marseille */
 
+/* Les + Populaires */
+.Section_LPP
+{
+    border: solid brown;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+#Aside
+{
+    border: solid green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.LP
+{
+    border: solid pink;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.LP1, .LP2, .LP3
+{
+    border: solid black;
+    width: 110px;
+	height: 120px;
+}
+.LPSTAR
+{
+    border: solid red;
+}
+/* Les + Populaires */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Info */
 .ActiviteMarseille
 {
     width: 20%;
     height: 20%;
 }
+/* Info */
