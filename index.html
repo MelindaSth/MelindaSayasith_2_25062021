@@ -3,193 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>Reservia</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" href="./fontawesome-free-5.15.3-web/css/all.css">
 </head>
-
 <body>
-<!-- Header -->
-<header>
-    <div><img class="Logo" src="./images/logo/Reservia.svg" alt="Logo Reservia"></div>
-    <nav class="Navigation_1">
-            <div class="Navigation_2">
-                <a class="Hébergements" href="#Hébergements">Hébergements</a></li>
-                <a class="Activités" href="#Activités">Activités</a></li>
-                <a class="Sinscrire" href="#">S'inscrire</a>
-            </div>   
-    </nav>
-</header>
-<!-- Header -->
 
-<!-- Introduction -->
-<div class="Introduction">
-    <h3>Trouvez votre hébergement pour des vacances de rêve</h3>
-</div>
-    <p class="Info">En plein centre ville ou en pleine nature</p>
-<!-- Introduction -->
+    <header>
+        <img class="Logo" src="./images/logo/Reservia.svg" alt="Logo Reservia">
+            <nav>
+                <a class="Hebergements" href="#Hebergements">Hébergements</a>
+                <a class="Activites" href="#Activites">Activités</a>
+                <a class="Inscrire" href="#">S'inscrire</a>
+            </nav>
+    </header>
 
-<!-- Recherche -->
-<div class=Recherche_1>
-    <div class="IconPosition">
+    <h1>Trouver votre hébergements pour des vacances de rêve</h1>
+    <h2>En plein centre ville ou en pleine nature</h2>
+
+    <form action="">
         <i class="fas fa-map-marker-alt"></i>
-    </div>
-        <input class="Recherche_2" id="Marseille" type="search" placeholder="Marseille, France"><button class="RechercheBouton">Rechercher</button>
-</div>
-<!-- Recherche -->
+        <input id="Marseille" type="text" value="Marseille, France">
+        <input type="button" id="BoutonRecherche" value="Rechercher">
+    </form>
 
-<!-- Filtres -->
-<section class="Filtres">
-    <div>
-    <p class="InfoFiltres">Filtres</p>
-    </div>
-
-    <div class="Eco">
-        <div class="IconEco">
-        <i class="fas fa-money-bill-wave"></i>
-        </div>
-        <p class="DetailsFiltres">Économique</p>
+    <div id="Filtres">
+        <h3>Filtres</h3>
+            <ul id="ListeFiltres">
+                <li><button><i class="fas fa-money-bill-wave"></i></button>Economique</li>
+                <li><button><i class="fas fa-child"></i></button>Familial</li>
+                <li><button><i class="fas fa-heart"></i></button>Romantique</li>
+                <li><button><i class="fas fa-dog"></i></button>Animaux autorisés</li>
+            </ul>
     </div>
 
-    <div class="Fam">
-        <div class="IconFam">
-        <i class="fas fa-child"></i>
-        </div>
-        <p class="DetailsFiltres">Familial</p>
+    <div id="Info">
+        <i class="fas fa-info"></i><p>Plus de 500 logements sont disponibles dans cette ville</p>
     </div>
 
-    <div class="Rom">
-        <div class="IconRom">
-        <i class="fas fa-heart"></i>
-        </div>
-        <p class="DetailsFiltres">Romantique</p>
-    </div>
+    <main>
+        <section>
 
-    <div class="Ani">
-        <div class="IconAni">
-        <i class="fas fa-dog"></i>
-        </div>
-        <p class="DetailsFiltres">Animaux autorisés</p>
-    </div>
-</section>
-<!-- Filtres -->
-
-<!-- Informations -->
-<div class="Informations">
-    <div class="IconInfo">
-        <i class="fas fa-info"></i>
-    </div>
-    <p class="InfoLogements">Plus de 500 logements sont disponibles dans cette ville</p>
-</div>
-<!-- Informations -->
-
-<section class="Corps_1">
-<!-- Hébergements à Marseille -->
-    <div class="Section_HM">
-        <h2>Hébergements à Marseille</h2>
-        <section class="SectionHébergements">
-                    <div class="PHM_1">
-                        <div class="HM"><img class="HM1" src="./images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"/><p class="HMDetails">Auberge La Cannebière<br>Nuit à partir de 25€</p></div>
-                        <div class="HM"><img class="HM2" src="./images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg"/><p class="HMDetails">Hôtel du port<br>Nuit à partir de 52€</p></div>
-                        <div class="HM"><img class="HM3" src="./images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg"/><p class="HMDetails">Hôtel Les mouettes<br>Nuit à partir de 76€</p></div>
-                    </div>
-                    <div class="PHM_2">
-                        <div class="HM"><img class="HM4" src="./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg"/><p class="HMDetails">Hôtel de la mer<br>Nuit à partir de 46€</p></div>
-                        <div class="HM"><img class="HM5" src="./images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg"/><p class="HMDetails">Auberge Le Panier<br>Nuit à partir de 23€</p></div>
-                        <div class="HM"><img class="HM6" src="./images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"/><p class="HMDetails">Hôtel chez Amina<br>Nuit à partir de 96€</p></div>
-                    </div>
         </section>
-        <p class="AfficherPlus">Afficher plus</p>
-    </div>
-<!-- Hébergements à Marseille -->
-
-<!-- Les plus populaires -->
-    <section class="Section_LPP">
+        
         <aside>
-            <h2>Les plus populaires <div class="IconLPP"><i class="fas fa-chart-line"></i></div></h2>
-            <div class="LPP">
-                <div class="LP"><img class="LP1" src="./images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg"/><p class="LPSTAR">Hôtel Le Soleil du matin</p></div>
-                <div class="LP"><img class="LP2" src="./images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg"/><p class="LPSTAR">Au cœur de l'eau Chambres d'hôtes</p></div>
-                <div class="LP"><img class="LP3" src="./images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg"/><p class="LPSTAR">Hôtel Tout bleu et Blanc</p></div>
-            </div>
+
         </aside>
-    </section>
-<!-- Les plus populaires -->
-</section>
+    </main>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Activités à Marseille -->
-        <h2 id="Activités">Activités à Marseille</h2>
-    <section>
-            <div><img class="ActiviteMarseille" src="./images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"/><br>Vieux Port</div>
-    </section>
-
-    <section>
-            <div><img class="ActiviteMarseille" src="./images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg"/><br>Fort de Pomègues</div>
-    </section>
-
-    <section>
-            <div><img class="ActiviteMarseille" src="./images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg"/><br>îles du Friout</div>
-    </section>
-
-    <section>
-            <div><img class="ActiviteMarseille" src="./images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"/><br>Parc National des Calanques</div>
-    </section>
-
-    <section>
-            <div><img class="ActiviteMarseille" src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"/><br>Notre-Dame-de-la-Garde</div>
-    </section>
-
-    <section>
-            <div><img class="ActiviteMarseille" src="./images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg"/><br>Parc Longchamp</div>
-    </section>
-<!-- Activités à Marseille -->
-
-<!-- Footer -->
-<div>A propos
-    <ul>
-        <li>Fonctionnement du site</li>
-        <li>Conditions générales de vente</li>
-        <li>Données et confidentialité</li>
-    </ul>
-</div>
-
-<div>Nos hébergements
-    <ul>
-        <li>Charte qualité</li>
-        <li>Soumettre votre hôtel</li>
-    </ul>
-</div>
-
-<div>Assistance
-    <ul>
-        <li>Centre d'aide</li>
-        <li>Nous contacter</li>
-    </ul>
-</div>
-<!-- Footer -->
+    <footer></footer>
 
 </body>
 </html>
