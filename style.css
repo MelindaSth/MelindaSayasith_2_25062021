@@ -176,14 +176,25 @@ button
 main
 {
     border: solid 2px red;
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-evenly;
 }
 
 section
 {
     border: solid 2px yellow;
+    width: 65%;
+}
 }
 
 aside
 {
-    border: solid 2px green;
+    border: 2px solid green;
+}
+
+.PhotoHebergement
+{
+    width: 20%;
+    height: 25%;
 }
