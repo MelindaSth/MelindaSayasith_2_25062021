@@ -160,7 +160,7 @@ button
 {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 33%;
     font-family: "Raleway_Thin";
 }
@@ -171,30 +171,68 @@ button
     border: solid 1px #F2F2F2;
     border-radius: 20px;
     margin-left: 10px;
+    margin-right: 10px;
+    color: #0065FC;
 }
 
-main
+#Hebergements
 {
-    border: solid 2px red;
-    display: inline-flex;
-    width: 100%;
-    justify-content: space-evenly;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-around;
+}   
+
+.HebergementsMarseille
+{
+    border: 2px solid red;
+    width: 70%;
+    display: grid;
+    grid-template-columns: 5% 25% 5% 25% 5% 25% 10%;
+    grid-template-rows: 10% 25% 15% 10% 25% 9% 6%;
 }
 
-section
+.PhotoHebergement1 { grid-column: 2; grid-row: 2; width: 100%; height: 100%; image-rendering: pixelated; object-fit: cover; }
+.PhotoHebergement2 { grid-column: 4; grid-row: 2; width: 100%; height: 100%; image-rendering: pixelated;  object-fit: cover; }
+.PhotoHebergement3 { grid-column: 6; grid-row: 2; width: 100%; height: 100%; image-rendering: pixelated;  object-fit: cover; }
+.PhotoHebergement4 { grid-column: 2; grid-row: 5; width: 100%; height: 100%; image-rendering: pixelated;  object-fit: cover; }
+.PhotoHebergement5 { grid-column: 4; grid-row: 5; width: 100%; height: 100%; image-rendering: pixelated;  object-fit: cover; }
+.PhotoHebergement6 { grid-column: 6; grid-row: 5; width: 100%; height: 100%; image-rendering: pixelated;  object-fit: cover; }
+
+h4
 {
-    border: solid 2px yellow;
-    width: 65%;
-}
+    grid-column-start: 2;
+    grid-column-end: 4;
 }
 
-aside
+.LesPlusPopulaires  
 {
-    border: 2px solid green;
+    border: 2px solid orange;
+    width: 30%;
+    height: 778px;
+    display: grid;
+    grid-template-columns: 5% 30% 40% 14% 11%;
+    grid-template-rows: 2% 10% 27% 2% 27% 2% 27%;;
 }
+
+.PhotoHebergementPopulaire1 { grid-column: 2; grid-row: 3; width: 100%; height: 100%; image-rendering: pixelated; object-fit: cover;}
+.PhotoHebergementPopulaire2 { grid-column: 2; grid-row: 5; width: 100%; height: 100%; image-rendering: pixelated; object-fit: cover;}
+.PhotoHebergementPopulaire3 { grid-column: 2; grid-row: 7; width: 100%; height: 100%; image-rendering: pixelated; object-fit: cover;}
+
 
 .PhotoHebergement
 {
-    width: 20%;
-    height: 25%;
+    border: 2px solid green;
+    width: 260px;
+    height: 200px;
+    image-rendering: pixelated;
+    object-fit: cover;
+}
+
+.PhotoHebergementPopulaire
+{
+    border: 2px solid violet;
+    width: 200px;
+    height: 200px;
+    image-rendering: pixelated;
+    object-fit: cover;
 }
