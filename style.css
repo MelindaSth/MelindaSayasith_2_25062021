@@ -15,7 +15,6 @@
 /* Général */
 body
 {
-    margin: 1%;
     font-family: 'Raleway_Regular';
 }
 h1
@@ -678,4 +677,26 @@ button
     box-shadow: -1px 2px 10px 0px rgb(0 0 0 / 55%);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+}
+
+/* Footer / Pied de la Page */
+footer
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #F2F2F2;
+    margin: 0;
+    padding: 0;
+}
+.ListeAPropos, .ListeNosHénergements
+{
+    margin-right: 15%;
+    list-style: none;
+    line-height: 25px;
+}
+.ListeAssistance
+{
+    list-style: none;
+    line-height: 25px;
 }
