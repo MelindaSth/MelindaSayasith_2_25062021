@@ -6,6 +6,9 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="./fontawesome-free-5.15.3-web/css/all.css">
 </head>
+
+<!-- Rajouter meta pour responsive meta name  -->
+
 <body>
 
     <header>
@@ -36,9 +39,7 @@
             </ul>
     </div>
 
-    <div id="Info">
-        <i class="fas fa-info"></i><p>Plus de 500 logements sont disponibles dans cette ville</p>
-    </div>
+    <p id="Info"><i class="fas fa-info"></i>Plus de 500 logements sont disponibles dans cette ville</p>
 
     <div id="Hebergements">
         <section class="HebergementsMarseille">
@@ -82,28 +83,43 @@
             <h4 id="AfficherPlus">Afficher plus</h4>
         </section>
 
-        <section class="LesPlusPopulaires">
-            <h3 class="TitreLesPlusPopulaires">Les Plus Populaires</h3><i class="fas fa-chart-line"></i>
+        <!-- Grid à revoir, plusieurs façon d'écrire une grille. + simplifier -->
 
-                <img class="PhotoHebergementPopulaire1" src="./images/hebergements/3_medium/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Hôtel Le soleil du matin">
-                    <ul class="DescriptionHebergementPopulaire1">
-                        <h4>Hôtel Le soleil du matin</h4>
-                        <li>Nuit à partir de 128€</li>
-                        <li><i id="EtoileBleue" class="fas fa-star"></i><i id="EtoileBleue" class="fas fa-star"></i><i id="EtoileBleue" class="fas fa-star"></i><i id="EtoileBleue" class="fas fa-star"></i><i id="EtoileBleue" class="fas fa-star"></i></li>
-                    </ul>
-                <img class="PhotoHebergementPopulaire2" src="./images/hebergements/3_medium/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Au coeur de l'eau Chambres d'hôtes">
-                    <ul class="DescriptionHebergementPopulaire2">
-                        <h4>Au coeur de l'eau Chambres d'hôtes</h4>
-                        <li>Nuit à partir de 71€</li>
-                        <li><i id="EtoileBleue" class="fas fa-star"></i><i id="EtoileBleue" class="fas fa-star"></i><i id="EtoileBleue" class="fas fa-star"></i><i id="EtoileBleue" class="fas fa-star"></i><i id="EtoileGrise" class="fas fa-star"></i></li>
-                    </ul>
-                <img class="PhotoHebergementPopulaire3" src="./images/hebergements/3_medium/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Hôtel Tout bleu et Blanc">
-                    <ul class="DescriptionHebergementPopulaire3">
-                        <h4>Hôtel Tout bleu et Blanc</h4>
-                        <li>Nuit à partir de 68€</li>
-                        <li><i id="EtoileBleue" class="fas fa-star"></i><i id="EtoileBleue" class="fas fa-star"></i><i id="EtoileBleue" class="fas fa-star"></i><i id="EtoileBleue" class="fas fa-star"></i><i id="EtoileGrise" class="fas fa-star"></i></li>
-                    </ul>
-        </section>
+        <aside class="LesPlusPopulaires">
+
+            <h3 class="TitreLesPlusPopulaires">Les Plus Populaires<i class="fas fa-chart-line"></i></h3> 
+            <!-- ok -->
+
+                    <div class="SectionLesPlusPopulaires">
+                        <img class="PhotoHebergementPopulaire" src="./images/hebergements/3_medium/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Hôtel Le soleil du matin">
+                            <ul class="DescriptionHebergementPopulaire">
+                                <li><h4>Hôtel Le soleil du matin</h4></li>
+                                <li>Nuit à partir de 128€</li>
+                                <i id="EtoilesPopulairesBleues" class="fas fa-star"></i><i id="EtoilesPopulairesBleues" class="fas fa-star"></i><i id="EtoilesPopulairesBleues" class="fas fa-star"></i><i id="EtoilesPopulairesBleues" class="fas fa-star"></i><i id="EtoilesPopulairesBleues" class="fas fa-star"></i>              
+                            </ul>
+                    </div>
+
+                    <div class="SectionLesPlusPopulaires">
+                        <img class="PhotoHebergementPopulaire" src="./images/hebergements/3_medium/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Au coeur de l'eau Chambres d'hôtes">
+                            <ul class="DescriptionHebergementPopulaire">
+                                <li><h4>Au coeur de l'eau Chambres d'hôtes</h4></li>
+                                <li>Nuit à partir de 71€</li>
+                                <i id="EtoilesPopulairesBleues" class="fas fa-star"></i><i id="EtoilesPopulairesBleues" class="fas fa-star"></i><i id="EtoilesPopulairesBleues" class="fas fa-star"></i><i id="EtoilesPopulairesBleues" class="fas fa-star"></i><i id="EtoilesPopulairesGrises" class="fas fa-star"></i>
+                            </ul>
+                    </div>
+
+                    <div class="SectionLesPlusPopulaires">
+                        <img class="PhotoHebergementPopulaire" src="./images/hebergements/3_medium/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Hôtel Tout bleu et Blanc">
+                            <ul class="DescriptionHebergementPopulaire">
+                                <li><h4>Hôtel Tout bleu et Blanc</h4></li>
+                                <li>Nuit à partir de 68€</li>
+                                <i id="EtoilesPopulairesBleues" class="fas fa-star"></i><i id="EtoilesPopulairesBleues" class="fas fa-star"></i><i id="EtoilesPopulairesBleues" class="fas fa-star"></i><i id="EtoilesPopulairesBleues" class="fas fa-star"></i><i id="EtoilesPopulairesGrises" class="fas fa-star"></i>
+                            </ul>
+                    </div>
+        </aside>
+
+        <!-- Juste flex -->
+
     </div>
 
     <div id="Activités">
