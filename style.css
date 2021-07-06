@@ -16,6 +16,7 @@
 body
 {
     font-family: 'Raleway_Regular';
+    max-width: 1440px;
 }
 h1
 {
@@ -43,7 +44,13 @@ a
     color: black;
 }
 
+/* CSS 1440px */
+
 /* Header */
+.HeaderSmartphone
+{
+    display: none;
+}
 header
 {
     display: flex;
@@ -154,7 +161,7 @@ form
 }
 button
 {
-    border-radius: 24px;
+    border-radius: 50%;
     padding: 12px;
     margin-right: 15px;
     background-color: #DEEBFF;
@@ -179,7 +186,7 @@ button
     color: #0065FC;
 }
 
-/* Hebergements à Marseille */
+/* Hebergements */
 #Main
 {
     display: flex;
@@ -187,6 +194,8 @@ button
     width: 100%;
     max-width: 1440px;
 }
+
+/* Hébergements à Marseille */
 .Hebergements
 {
     padding: 1%;
@@ -244,9 +253,7 @@ button
     object-fit: cover;
 }
 
-/* Description des Hébergements à Marseille */
-
-/* Hébergements les plus populaires */
+/* Hébergements Les Plus Populaires */
 .LesPlusPopulaires  
 {
     border-radius: 25px;
@@ -484,4 +491,142 @@ footer
 {
     list-style: none;
     line-height: 25px;
+}
+
+/* Responsive Design - Media Queries */
+
+/* Nouvelle règle si la fenetre fait au max 1024px */
+@media screen and (max-width: 1024px)
+{
+    html
+    {
+        width: fit-content;
+    }
+    .HeaderSmartphone
+    {
+    display: none;
+    }
+    #Info
+    {
+        width: 50%;
+    }
+    .Hebergements
+    {
+        width: 100%;
+        max-width: 700px;
+    }
+    .LesPlusPopulaires
+    {
+        width: 100%;
+        max-width: 275px;
+    }
+    .TitreHebergementsMarseille
+    {
+        margin: 1%;
+    }
+    .SectionHebergement
+    {
+        width: 100%;
+        max-width: 210px;
+    }
+    .SectionLesPlusPopulaires
+    {
+        width: 100%;
+        max-width: 275px;
+        height: 100%;
+        max-height: 150px;
+    }
+    #EtoilesPopulairesBleues
+    {
+        margin-top: 0;
+    }
+    #AfficherPlus
+    {
+        margin-top: 15px;   
+    }     
+}
+
+/* Tablette qui fait au max 768px */
+@media only screen and (min-device-width: 768px) and (max-device-width: 991px)
+{
+    .HeaderSmartphone
+    {
+    display: none;
+    }
+    #Main
+    {
+        flex-direction: column-reverse;
+    }
+    .LesPlusPopulaires
+    {
+        max-width: 1020px;
+        flex-direction: row;
+        margin-bottom: 1%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: 100%;
+        max-height: 245px;
+    }
+    .TitreLesPlusPopulaires
+    {
+        width: 100%;
+        max-width: 1016px;
+        margin-bottom: 1%;
+    }
+    .SectionLesPlusPopulaires
+    {
+        width: 100%;
+        max-width: 325px;
+    }
+    .PhotoHebergementPopulaire
+    {
+        height: 100%;
+        max-height: 120px;
+    }
+    .Hebergements
+    {
+        width: 100%;
+        max-width: 1050px;
+    }
+    .SectionHebergement
+    {
+        max-width: 325px;
+    }
+}
+
+/* Smartphones */
+@media only screen and (min-device-width: 320px) and (max-device-width: 425px)
+{
+    header
+    {
+        display: none;
+    }
+    .HeaderSmartphone
+    {
+        border: solid 2px greenyellow;
+        display: grid;
+    }
+    #Logo
+    {
+        grid-area: 1 / 1 / 1 / 1;
+    }
+    .NavSmartphone
+    {
+        display: grid;
+        grid-template-columns: 1fr, 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .InscrireSmartphone
+    {
+        border: solid 2px red;
+        grid-area: 1 / 2 / 1 / 2;
+    }
+    .HebergementsSmartphone
+    {
+        grid-area: 2 / 1 / 2 / 1;
+    }
+    .ActivitésSmartphone
+    {
+        grid-area: 2 / 2 / 2 / 2;
+    }
 }
