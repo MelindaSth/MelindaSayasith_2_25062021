@@ -172,20 +172,23 @@ button
 }
 
 /* Hebergements à Marseille */
-#Hebergements
+.Main
 {
     display: flex;
-    height: 700px;
+    border: solid 2px yellow;
     justify-content: space-between;
-}   
-.HebergementsMarseille
+}
+.Hebergements
 {
-    width: 72%;
-    display: grid;
-    grid-template-columns: 4% 26% 7% 26% 7% 26% 4%;
-    grid-template-rows: 10% 20% 12% 10% 20% 12% 5% 6% 5%;
-    border-radius: 25px;
+    border: solid 2px blueviolet;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 980px;
     background-color: #F2F2F2;
+    border-radius: 25px;
+    justify-content: space-around;
 }
 .TitreHebergementsMarseille
 {
@@ -195,188 +198,36 @@ button
     grid-column-end: 4;
     font-size: 21px;
 }
+.HebergementsMarseille
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 30px;
+}
+
+.SectionHebergement
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: solid 2px black;
+    border-radius: 20px;
+    background-color: white;
+}
+
 
 /* Photos Hebergements à Marseille */
-.PhotoHebergement1
+.PhotoHebergement
 { 
-    grid-column: 2;
-    grid-row: 2; width: 100%;
-    height: 100%;
-    image-rendering: pixelated;
-    object-fit: cover;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border: 4px solid white;
-    box-shadow: 1px 0px 13px -5px rgb(0 0 0 / 55%);
-}
-.PhotoHebergement2
-{
-    grid-column: 4;
-    grid-row: 2;
     width: 100%;
     height: 100%;
-    image-rendering: pixelated;
-    object-fit: cover;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border: 4px solid white;
-    box-shadow: 1px 0px 13px -5px rgb(0 0 0 / 55%);
-}
-.PhotoHebergement3
-{
-    grid-column: 6;
-    grid-row: 2;
-    width: 100%;
-    height: 100%;
-    image-rendering: pixelated;
-    object-fit: cover;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border: 4px solid white;
-    box-shadow: 1px 0px 13px -5px rgb(0 0 0 / 55%);
-}
-.PhotoHebergement4
-{
-    grid-column: 2;
-    grid-row: 5;
-    width: 100%;
-    height: 100%;
-    image-rendering: pixelated;
-    object-fit: cover;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border: 4px solid white;
-    box-shadow: 1px 0px 13px -5px rgb(0 0 0 / 55%);
-}
-.PhotoHebergement5
-{
-    grid-column: 4;
-    grid-row: 5;
-    width: 100%;
-    height: 100%;
-    image-rendering: pixelated;
-    object-fit: cover;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border: 4px solid white;
-    box-shadow: 1px 0px 13px -5px rgb(0 0 0 / 55%);
-}
-.PhotoHebergement6
-{
-    grid-column: 6;
-    grid-row: 5;
-    width: 100%;
-    height: 100%;
-    image-rendering: pixelated;
-    object-fit: cover;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border: 4px solid white;
-    box-shadow: 1px 0px 13px -5px rgb(0 0 0 / 55%);
+    max-height: 150px;
+    border-radius: 20px 20px 0 0;
 }
 
 /* Description des Hébergements à Marseille */
-.DescriptionHebergement1
-{
-    list-style: none;
-    grid-column: 2;
-    grid-row: 3;
-    background: white;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    padding: 0;
-    margin: 0%;
-    border: 4px solid white;
-    width: 100%;
-    height: 100%;
-    line-height: 20px;
-    box-shadow: -1px 2px 10px 0px rgb(0 0 0 / 55%);
-}
-.DescriptionHebergement2
-{
-    list-style: none;
-    grid-column: 4;
-    grid-row: 3;
-    background: white;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    padding: 0;
-    margin: 0%;
-    border: 4px solid white;
-    width: 100%;
-    height: 100%;
-    line-height: 20px;
-    box-shadow: -1px 2px 10px 0px rgb(0 0 0 / 55%);
-}
-.DescriptionHebergement3
-{
-    list-style: none;
-    grid-column: 6;
-    grid-row: 3;
-    background: white;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    padding: 0;
-    margin: 0%;
-    border: 4px solid white;
-    width: 100%;
-    height: 100%;
-    line-height: 20px;
-    box-shadow: -1px 2px 10px 0px rgb(0 0 0 / 55%);
-}
-.DescriptionHebergement4
-{
-    list-style: none;
-    grid-column: 2;
-    grid-row: 6;
-    background: white;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    padding: 0;
-    margin: 0%;
-    border: 4px solid white;
-    width: 100%;
-    height: 100%;
-    line-height: 20px;
-    box-shadow: -1px 2px 10px 0px rgb(0 0 0 / 55%);
-}
-.DescriptionHebergement5
-{
-    list-style: none;
-    grid-column: 4;
-    grid-row: 6;
-    background: white;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    padding: 0;
-    margin: 0%;
-    border: 4px solid white;
-    width: 100%;
-    height: 100%;
-    line-height: 20px;
-    box-shadow: -1px 2px 10px 0px rgb(0 0 0 / 55%);
-}
-.DescriptionHebergement6
-{
-    list-style: none;
-    grid-column: 6;
-    grid-row: 6;
-    background: white;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    padding: 0 0 0 0;
-    margin: 0;
-    border: 4px solid white;
-    width: 100%;
-    height: 100%;
-    line-height: 20px;
-    box-shadow: -1px 2px 10px 0px rgb(0 0 0 / 55%);
-}
-#AfficherPlus
-{
-    grid-column: 2;
-    grid-row: 8;
-}
 
 /* Hébergements les plus populaires */
 .LesPlusPopulaires  
@@ -387,6 +238,7 @@ button
     flex-direction: column;
     width: 22%;
     padding: 25px;
+    border: solid 2px green;
 }
 .TitreLesPlusPopulaires
 {
@@ -418,8 +270,8 @@ button
 /* Photos Hébergements Les Plus Populaires */
 .PhotoHebergementPopulaire
 {
-    width: 117px;
-    height: 180px;
+    width: 45%;
+    height: 100%;
     image-rendering: pixelated;
     object-fit: cover;
     border-top-left-radius: 20px;
@@ -479,8 +331,9 @@ button
 {
     display: grid;
     grid-template-columns: repeat(4, 23%);
-    grid-template-rows: 52% 48%;
+    grid-template-rows: 47% 50%;
     grid-column-gap: 38px;
+    grid-row-gap: 10px; 
 }
 
 /* Affichage des Activités */
@@ -504,8 +357,8 @@ button
     border-radius: 20px;
     box-shadow: 0px 10px 20px 0px rgb(0 0 0 / 30%);
     grid-area: 2 / 2;
-    margin: 0;
     margin-top: 75px;
+    height: fit-content;
 }
 .ParcNational
 {
