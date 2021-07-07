@@ -54,21 +54,32 @@ a
 header
 {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
     max-width: 1440px;
 }
 
 /* Menu de Navigation */
+nav
+{
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
 nav a
 {
-    margin: 0 35px 0 0; /* HDBG */
-    padding: 25px 0 0 0;
     text-decoration: none;
     color: black;
     font-family: "Raleway_Regular";
+    padding-top: 20px;
 }
-.Inscrire
+.NavHebergements
+{
+    margin: 0px 0px 0px 55%;
+}
+.NavInscrire
 {
     color: #0065FC;
     font-family: "Raleway_SemiBold";
@@ -127,6 +138,10 @@ form
     border-top-right-radius: 10px;
     font-size: 102%;
 }
+.RechercheSmartphone  
+{
+    display: none;
+}
 
 /* Filtres */
 #Filtres
@@ -136,6 +151,7 @@ form
     align-items: center;
     justify-content: flex-start;
     max-width: 1440px;
+    flex-wrap: wrap;
 }
 
 #ListeFiltres
@@ -145,6 +161,9 @@ form
     list-style: none;
     width: inherit;
     font-family: "Raleway_Regular";
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1060px;
 }
 #ListeFiltres li
 {
@@ -153,7 +172,8 @@ form
     align-items: center;
     padding: 0 31px 0px 0px;
     border-radius: 30px;
-    margin-right: 70px;
+    width: 100%;
+    max-width: fit-content;
 }
 .fa-money-bill-wave, .fa-child, .fa-heart, .fa-dog
 {
@@ -496,7 +516,7 @@ footer
 /* Responsive Design - Media Queries */
 
 /* Nouvelle règle si la fenetre fait au max 1024px */
-@media screen and (max-width: 1024px)
+@media only screen and (max-width: 1024px)
 {
     html
     {
@@ -505,6 +525,10 @@ footer
     .HeaderSmartphone
     {
     display: none;
+    }
+    .RechercheSmartphone   
+    {
+        display: none;
     }
     #Info
     {
@@ -518,7 +542,7 @@ footer
     .LesPlusPopulaires
     {
         width: 100%;
-        max-width: 275px;
+        max-width: 220px;
     }
     .TitreHebergementsMarseille
     {
@@ -532,9 +556,18 @@ footer
     .SectionLesPlusPopulaires
     {
         width: 100%;
-        max-width: 275px;
+        max-width: 221px;
         height: 100%;
-        max-height: 150px;
+        max-height: 130px;
+    }
+    .DescriptionHebergementPopulaire
+    {
+        font-size: 13px;
+    }
+    .PhotoHebergementPopulaire
+    {
+        width: 100%;
+        max-width: 70px;
     }
     #EtoilesPopulairesBleues
     {
@@ -547,11 +580,26 @@ footer
 }
 
 /* Tablette qui fait au max 768px */
-@media only screen and (min-device-width: 768px) and (max-device-width: 991px)
+@media only screen and (max-device-width: 768px)
 {
-    .HeaderSmartphone
+    .NavHebergements {
+        margin: 0px 0px 0px 35%;
+    }
+    .RechercheSmartphone    
     {
-    display: none;
+        display: none;
+    }
+    #ListeFiltres
+    {
+        justify-content: space-evenly;
+    }
+    #ListeFiltres li 
+    {
+        margin: 5px;
+    }
+    #Info
+    {
+        width: 60%;
     }
     #Main
     {
@@ -559,13 +607,11 @@ footer
     }
     .LesPlusPopulaires
     {
-        max-width: 1020px;
+        max-width: 715px;
         flex-direction: row;
         margin-bottom: 1%;
         flex-wrap: wrap;
         justify-content: space-between;
-        height: 100%;
-        max-height: 245px;
     }
     .TitreLesPlusPopulaires
     {
@@ -576,12 +622,36 @@ footer
     .SectionLesPlusPopulaires
     {
         width: 100%;
-        max-width: 325px;
+        max-width: 225px;
+        flex-direction: column;
+        padding: 2px;
+        background-color: white;
     }
     .PhotoHebergementPopulaire
     {
+        width: 100%;
+        max-width: 225px;
+        border-radius: 20px 20px 0 0;
         height: 100%;
-        max-height: 120px;
+        max-height: 80px;
+    }
+    .DescriptionHebergementPopulaire
+    {
+        font-size: 13px;
+        border-radius: 0 0 20px 20px;
+        width: 100%;
+        max-width: 225px;
+        height: 100%;
+        max-height: 40px;
+        padding: 0;
+    }
+    h4
+    {
+        margin: 0;
+    }
+    #EtoilesPopulairesBleues, #EtoilesPopulairesGrises, #EtoileBleue, #EtoileGrise
+    {
+        display: none;
     }
     .Hebergements
     {
@@ -590,43 +660,113 @@ footer
     }
     .SectionHebergement
     {
-        max-width: 325px;
+        max-width: 230px;
     }
 }
 
 /* Smartphones */
 @media only screen and (min-device-width: 320px) and (max-device-width: 425px)
 {
-    header
+    nav
     {
-        display: none;
-    }
-    .HeaderSmartphone
-    {
-        border: solid 2px greenyellow;
         display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        font-size: 40px;
     }
     #Logo
     {
-        grid-area: 1 / 1 / 1 / 1;
+        width: 100%;
+        max-width: 340px;
+        margin-left: 5%;
     }
-    .NavSmartphone
+    .NavHebergements
     {
-        display: grid;
-        grid-template-columns: 1fr, 1fr;
-        grid-template-rows: 1fr 1fr;
+        width: 100%;
+        padding-bottom: 5%;
+        margin: 0;
+        text-align: center;
+        border-bottom: 2px solid #F2F2F2;
     }
-    .InscrireSmartphone
+    .NavActivités
+    {
+        width: 100%;
+        padding-bottom: 5%;
+        text-align: center;
+        border-bottom: 2px solid #F2F2F2;
+    }
+    .NavInscrire
+    {
+        grid-area: 1 / 2;
+        padding: 0;
+        text-align: center;
+        text-align: end;
+        margin-right: 10%;
+    }
+    nav :hover
+    {
+    border-bottom: solid 2px #0065FC;
+    color: #0065FC;
+    border-top: none;
+    }
+    h1
+    {
+        margin: 0px 15px 0px 15px;
+        padding: 1%;
+        font-size: 65px;
+    }
+    h2
+    {
+        font-size: 35px;
+        margin: 0 0 0 30px;
+    }
+    form
+    {
+        width: 100%;
+        max-width: 930px;
+        align-items: center;
+        margin: auto;
+        margin-top: 2%;
+        padding: 0;
+    }
+    .fa-map-marker-alt:before
+    {
+        content: "\f3c5";
+        padding: 20px 30px 21px 30px;
+        background-color: #F2F2F2;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        font-size: 40px;
+    }
+    #Marseille
+    {
+        width: 100%;
+        font-size: 45px;
+        border: solid 1px #F2F2F2;
+    }
+    #BoutonRecherche
+    {
+        display: none;
+    }
+    .RechercheSmartphone
+    {
+        display: flex;
+        background-color: #0065FC;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-top-left-radius: 0%;
+        border-bottom-left-radius: 0%;
+        color: #ffffff;
+        font-size: 35px;
+        padding: 23px 20px;
+        margin: 0px 0px 0px -5px;
+    }
+    #Filtres
     {
         border: solid 2px red;
-        grid-area: 1 / 2 / 1 / 2;
     }
-    .HebergementsSmartphone
+    #ListeFiltres
     {
-        grid-area: 2 / 1 / 2 / 1;
-    }
-    .ActivitésSmartphone
-    {
-        grid-area: 2 / 2 / 2 / 2;
+        border: solid 2px green;    
     }
 }
