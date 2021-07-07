@@ -67,6 +67,7 @@ nav
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
+    margin: 1%;
 }
 nav a
 {
@@ -193,7 +194,7 @@ button
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    width: 33%;
+    width: 100%;
     font-family: "Raleway_Thin";
     margin: 1% 0 1% 0;
 }
@@ -218,7 +219,7 @@ button
 /* Hébergements à Marseille */
 .Hebergements
 {
-    padding: 1%;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -226,6 +227,7 @@ button
     background-color: #F2F2F2;
     border-radius: 25px;
     justify-content: space-around;
+    margin: 1%;
 }
 .TitreHebergementsMarseille
 {
@@ -234,14 +236,15 @@ button
     grid-column-start: 2;
     grid-column-end: 4;
     font-size: 21px;
+    margin: 0;
 }
 .HebergementsMarseille
 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 15px;
-    grid-row-gap: 30px;
+    grid-column-gap: 5px;
+    grid-row-gap: 25px;
 }
 .HebergementsMarseille a 
 {
@@ -257,7 +260,7 @@ button
     border-radius: 20px;
     background-color: white;
     width: 100%;
-    max-width: 295px;
+    max-width: 290px;
     box-shadow: 0px 10px 20px 0px rgb(0 0 0 / 30%);
 }
 
@@ -283,6 +286,7 @@ button
     width: 100%;
     max-width: 335px;
     padding: 25px;
+    margin: 1%;
 }
 .TitreLesPlusPopulaires
 {
@@ -515,8 +519,8 @@ footer
 
 /* Responsive Design - Media Queries */
 
-/* Nouvelle règle si la fenetre fait au max 1024px */
-@media only screen and (max-width: 1024px)
+/* 1024px */
+@media screen and (max-width: 1024px)
 {
     html
     {
@@ -539,10 +543,20 @@ footer
         width: 100%;
         max-width: 700px;
     }
+    .HebergementsMarseille
+    {
+        width: auto;
+    }
+    .PhotoHebergement
+    {
+
+        max-height: 100px;
+    }
     .LesPlusPopulaires
     {
         width: 100%;
         max-width: 220px;
+        justify-content: space-around;
     }
     .TitreHebergementsMarseille
     {
@@ -551,14 +565,14 @@ footer
     .SectionHebergement
     {
         width: 100%;
-        max-width: 210px;
+        max-width: 195px;
+        height: auto;
+        max-height: fit-content;
     }
     .SectionLesPlusPopulaires
     {
         width: 100%;
         max-width: 221px;
-        height: 100%;
-        max-height: 130px;
     }
     .DescriptionHebergementPopulaire
     {
@@ -580,7 +594,7 @@ footer
 }
 
 /* Tablette qui fait au max 768px */
-@media only screen and (max-device-width: 768px)
+@media screen and (max-device-width: 768px)
 {
     .NavHebergements {
         margin: 0px 0px 0px 35%;
@@ -604,68 +618,41 @@ footer
     #Main
     {
         flex-direction: column-reverse;
+        align-items: center;
     }
     .LesPlusPopulaires
     {
-        max-width: 715px;
+        width: 100%;
+        max-width: 690px;
+        height: 100%;
+        max-height: 342Px;
         flex-direction: row;
-        margin-bottom: 1%;
         flex-wrap: wrap;
-        justify-content: space-between;
+        margin-bottom: 3%;
     }
     .TitreLesPlusPopulaires
     {
         width: 100%;
-        max-width: 1016px;
-        margin-bottom: 1%;
-    }
-    .SectionLesPlusPopulaires
-    {
-        width: 100%;
-        max-width: 225px;
-        flex-direction: column;
-        padding: 2px;
-        background-color: white;
-    }
-    .PhotoHebergementPopulaire
-    {
-        width: 100%;
-        max-width: 225px;
-        border-radius: 20px 20px 0 0;
-        height: 100%;
-        max-height: 80px;
+        margin: 0 0 3% 0;
     }
     .DescriptionHebergementPopulaire
     {
-        font-size: 13px;
-        border-radius: 0 0 20px 20px;
-        width: 100%;
-        max-width: 225px;
-        height: 100%;
-        max-height: 40px;
-        padding: 0;
-    }
-    h4
-    {
-        margin: 0;
-    }
-    #EtoilesPopulairesBleues, #EtoilesPopulairesGrises, #EtoileBleue, #EtoileGrise
-    {
-        display: none;
+        font-size: 15px;
+        padding: 10px;
     }
     .Hebergements
     {
         width: 100%;
-        max-width: 1050px;
+        max-width: 730px;
     }
     .SectionHebergement
     {
-        max-width: 230px;
+        height: auto;
     }
 }
 
 /* Smartphones */
-@media only screen and (min-device-width: 320px) and (max-device-width: 425px)
+@media screen and (max-device-width: 425px)
 {
     nav
     {
@@ -673,17 +660,19 @@ footer
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         font-size: 40px;
+        width: max-content;
     }
     #Logo
     {
         width: 100%;
-        max-width: 340px;
+        max-width: 230px;
         margin-left: 5%;
     }
     .NavHebergements
     {
         width: 100%;
         padding-bottom: 5%;
+        padding-left: 10px;
         margin: 0;
         text-align: center;
         border-bottom: 2px solid #F2F2F2;
@@ -692,6 +681,7 @@ footer
     {
         width: 100%;
         padding-bottom: 5%;
+        padding-left: 10px;
         text-align: center;
         border-bottom: 2px solid #F2F2F2;
     }
@@ -711,28 +701,28 @@ footer
     }
     h1
     {
-        margin: 0px 15px 0px 15px;
+        margin: 0px 15px 10px 15px;
         padding: 1%;
-        font-size: 65px;
+        font-size: 30px;
     }
     h2
     {
-        font-size: 35px;
-        margin: 0 0 0 30px;
+        font-size: 25px;
+        margin: 0 0px 20px 20px;
     }
     form
     {
         width: 100%;
-        max-width: 930px;
+        max-width: 500px;
         align-items: center;
         margin: auto;
-        margin-top: 2%;
+        margin-top: 3%;
         padding: 0;
     }
     .fa-map-marker-alt:before
     {
         content: "\f3c5";
-        padding: 20px 30px 21px 30px;
+        padding: 15px 30px 13px 30px;
         background-color: #F2F2F2;
         border-top-left-radius: 20px;
         border-bottom-left-radius: 20px;
@@ -741,7 +731,7 @@ footer
     #Marseille
     {
         width: 100%;
-        font-size: 45px;
+        font-size: 35px;
         border: solid 1px #F2F2F2;
     }
     #BoutonRecherche
@@ -758,15 +748,81 @@ footer
         border-bottom-left-radius: 0%;
         color: #ffffff;
         font-size: 35px;
-        padding: 23px 20px;
+        padding: 15px 20px;
         margin: 0px 0px 0px -5px;
     }
     #Filtres
     {
-        border: solid 2px red;
+        width: 100%;
+        max-width: 580px;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 315px;
     }
     #ListeFiltres
     {
-        border: solid 2px green;    
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-width: 570px; 
+    }
+    #ListeFiltres li
+    {
+        width: 100%;
+        max-width: fit-content;
+        font-size: 25px;
+    }
+    h3
+    {
+        font-size: 25px;
+    }
+    #Info
+    {
+        font-size: 25px;
+        width: 90%;
+        margin-left: 5%;
+        margin-bottom: 1%;
+    }
+    .LesPlusPopulaires
+    {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        max-height: fit-content;
+        border-radius: 0;
+    }
+    .SectionLesPlusPopulaires
+    {
+        width: 100%;
+        max-width: 500px;
+        height: 180px;
+    }
+    .PhotoHebergementPopulaire
+    {
+        max-width: fit-content;
+    }
+    .HebergementsMarseille 
+    {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        max-height: fit-content;
+    }
+    .HebergementsMarseille a 
+    {
+        width: 100%;
+        max-width: 500px;
+        height: 180px;
+    }
+    .Hebergements
+    {
+        background-color: white;
     }
 }
