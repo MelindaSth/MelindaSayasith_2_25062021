@@ -202,7 +202,7 @@ button
 {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    flex-wrap: wrap-reverse;
 }
 
 /* Hébergements à Marseille */
@@ -212,6 +212,7 @@ button
     display: flex;
     flex-direction: column;
     width: 100%;
+    max-width: 1080px;
     background-color: #F2F2F2;
     border-radius: 25px;
     justify-content: space-around;
@@ -249,7 +250,7 @@ button
 }
 #AfficherPlus
 {
-    margin: 3% 0 0 0;
+    margin: 60px 0 0 0;
 }
 
 /* Photos Hebergements à Marseille */
@@ -271,7 +272,8 @@ button
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 45%;
+    width: 100%;
+    max-width: 600px;
     padding: 25px;
     margin: 1%;
 }
@@ -304,7 +306,8 @@ button
 {
     width: 100%;
     max-width: 250px;
-    max-height: 145px;
+    max-height: 200px;
+    height: 100%;
     image-rendering: pixelated;
     object-fit: cover;
     border-top-left-radius: 20px;
@@ -486,86 +489,14 @@ footer
 
 /* Responsive Design - Media Queries */
 
-@media screen and (max-device-width: 1440px) 
+@media screen and (max-device-width: 2180px) 
 {
-    .PhotoHebergementPopulaire
-    {
-        max-height: 160px;
-    }
-}
+   
+}    
 
-/* 1024px */
 @media screen and (max-device-width: 1024px)
 {
-    html
-    {
-        width: fit-content;
-    }
-    .HeaderSmartphone
-    {
-    display: none;
-    }
-    .RechercheSmartphone   
-    {
-        display: none;
-    }
-    #Info
-    {
-        width: 50%;
-    }
-    .Hebergements
-    {
-        width: 100%;
-        max-width: 700px;
-    }
-    .HebergementsMarseille
-    {
-        width: auto;
-    }
-    .PhotoHebergement
-    {
-
-        max-height: 100px;
-    }
-    .LesPlusPopulaires
-    {
-        width: 100%;
-        max-width: 220px;
-        justify-content: space-around;
-    }
-    .TitreHebergementsMarseille
-    {
-        margin: 1%;
-    }
-    .SectionHebergement
-    {
-        width: 100%;
-        max-width: 195px;
-        height: auto;
-        max-height: fit-content;
-    }
-    .SectionLesPlusPopulaires
-    {
-        width: 100%;
-        max-width: 221px;
-    }
-    .DescriptionHebergementPopulaire
-    {
-        font-size: 13px;
-    }
-    .PhotoHebergementPopulaire
-    {
-        width: 100%;
-        max-width: 70px;
-    }
-    #EtoilesPopulairesBleues
-    {
-        margin-top: 0;
-    }
-    #AfficherPlus
-    {
-        margin-top: 15px;
-    }     
+    
 }
 
 /* Tablette qui fait au max 768px */
