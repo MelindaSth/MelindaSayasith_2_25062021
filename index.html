@@ -12,12 +12,22 @@
 <body>
     
     <header>
+            <img id="Logo" src="./images/logo/Reservia.svg" alt="Logo Reservia">
             <nav>
-                <img id="Logo" src="./images/logo/Reservia.svg" alt="Logo Reservia">
                 <a class="NavHebergements" href="#Main">Hébergements</a>
                 <a class="NavActivités" href="#Activités">Activités</a>
                 <a class="NavInscrire" href="#">S'inscrire</a>
             </nav>
+    </header>
+
+    <!-- Header pour Smartphone -->
+    <header class="HeaderSmartphone">
+        <nav class="NavSmartphone">
+            <img id="Logo" src="./images/logo/Reservia.svg" alt="Logo Reservia">
+            <a class="InscrireSmartphone" href="#">S'inscrire</a>  
+            <a class="HebergementsSmartphone" href="#Main">Hébergements</a>
+            <a class="ActivitésSmartphone" href="#Activités">Activités</a>    
+        </nav>
     </header>
 
     <h1>Trouver votre hébergements pour des vacances de rêve</h1>
@@ -27,7 +37,6 @@
         <i class="fas fa-map-marker-alt"></i>
         <input id="Marseille" type="text" value="Marseille, France">
         <input type="button" id="BoutonRecherche" value="Rechercher">
-        <button class="RechercheSmartphone"><i class="fas fa-search"></i></button>
     </form>
 
     <div id="Filtres">
@@ -98,7 +107,7 @@
         <aside class="LesPlusPopulaires">
 
             <h1 class="TitreLesPlusPopulaires">Les Plus Populaires<i class="fas fa-chart-line"></i></h1> 
-
+                    <div class="AsidePopulaire">
                     <a href="#Logo">
                         <img class="PhotoHebergementPopulaire" src="./images/hebergements/3_medium/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Hôtel Le soleil du matin">
                         <div class="DescriptionHebergementPopulaire">
@@ -131,7 +140,7 @@
                             </div>
                         </div>
                     </a>
-
+                </div>
         </aside>
 </div>
 
