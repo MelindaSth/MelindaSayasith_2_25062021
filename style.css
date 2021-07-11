@@ -26,19 +26,21 @@ body
 h1
 {   
     font-family: "Raleway_SemiBold";
+    margin: 1%;
 }
 h2
 {
-    font-family: "Raleway_Thin";
+    font-family: "Raleway_SemiBold";
+    margin: 1%;
 }
 h3
 {
     font-family: "Raleway_SemiBold";
+    margin: 0;
 }
-h4
+p
 {
-    font-family: "Raleway_SemiBold";
-    font-size: 15px;
+    margin: 1% 0 1% 0;
 }
 a 
 {
@@ -58,6 +60,7 @@ a
 header
 {
     max-width: 1440px;
+    padding: 1%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -176,10 +179,11 @@ border-top: solid 2px #0065FC;
 }
 form
 {
+    max-width: 1440px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 2%;
+    margin: 1%;
 }
 
 @media screen and (max-width: 425px)
@@ -230,7 +234,8 @@ form
 /* Filtres */
 #Filtres
 {
-    margin-top: 2%;
+    max-width: 1440px;
+    margin: 1%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -248,11 +253,10 @@ form
 #ListeFiltres
 {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     list-style: none;
-    width: inherit;
-    font-family: "Raleway_Regular";
     flex-wrap: wrap;
+    padding: 0;
     width: 100%;
 }
 
@@ -290,12 +294,8 @@ button
 }
 #Info
 {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    font-family: "Raleway_Thin";
-    margin: 1% 0 1% 0;
+    max-width: 1440px;
+    margin: 1%;
 }
 .fa-info:before
 {
@@ -312,10 +312,17 @@ button
 {
     max-width: 1440px;
     display: flex;
-    justify-content: space-between;
+}
+.AfficherPlus
+{
+    margin: 5% 0 1% 0;
 }
 
 /* ARTICLE HEBERGEMENTS A MARSEILLE */
+.TitreHebergementsMarseille
+{
+    margin: 1% 0 1% 0;
+}
 .Hebergements
 {
     padding: 1%;
@@ -323,48 +330,63 @@ button
     flex-direction: column;
     background-color: #F2F2F2;
     border-radius: 25px;
-    justify-content: space-around;
     margin: 1%;
 }
 .HebergementsMarseille
 {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 7%;
-    grid-row-gap: 7%;
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: repeat(2, 50%);
+    grid-column-gap: 4%;
+    grid-row-gap: 5%;
+    justify-content: center;
+    margin: 1%;
 }
 .HebergementsMarseille a 
 {
-    color: black;
-    list-style: none;
-    margin: 2%;
-    padding: 2px;
+    background-color: #ffffff;
     border-radius: 20px;
-    background-color: white;
-    width: 100%;
-    max-width: fit-content;
     box-shadow: 0px 10px 20px 0px rgb(0 0 0 / 30%);
+    width: 100%;
+    height: 100%;
+    padding: 2px;
 }
 .PhotoHebergement
 { 
     width: 100%;
     height: 100%;
-    max-height: 160px;
+    max-height: 125px;
     border-radius: 20px 20px 0 0;
     image-rendering: pixelated;
     object-fit: cover;
 }
+.DescriptionHebergement
+{
+    padding: 10px;
+}
 
 /* ASIDE - LES PLUS POPULAIRES */
+.TitreLesPlusPopulaires
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
 .LesPlusPopulaires
 {
     border-radius: 25px;
     background-color: #F2F2F2;
     display: flex;
     flex-direction: column;
-    padding: 25px;
+    justify-content: space-around;
+    padding: 0 15px 0 15px;
     margin: 1%;
+}
+.AsidePopulaire
+{
+    border: solid 1px yellow;
+    display: flex;
+    flex-direction: column;
 }
 .LesPlusPopulaires a
 {
