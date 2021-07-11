@@ -55,11 +55,18 @@ a
 {
     display: none;
 }
+.fa-star
+{
+    color: #0065FC;
+}
+.grey-star
+{
+    color: lightgray;
+}
 
 /* Header */
 header
 {
-    max-width: 1440px;
     padding: 1%;
     display: flex;
     justify-content: space-between;
@@ -310,7 +317,6 @@ button
 /* MAIN : ARTICLE HERBERGEMENTS A MARSEILLE + ASIDE POPULAIRES */
 #Main
 {
-    max-width: 1440px;
     display: flex;
 }
 .AfficherPlus
@@ -331,6 +337,7 @@ button
     background-color: #F2F2F2;
     border-radius: 25px;
     margin: 1%;
+    width: 70%;
 }
 .HebergementsMarseille
 {
@@ -347,22 +354,20 @@ button
     background-color: #ffffff;
     border-radius: 20px;
     box-shadow: 0px 10px 20px 0px rgb(0 0 0 / 30%);
-    width: 100%;
-    height: 100%;
     padding: 2px;
 }
 .PhotoHebergement
 { 
     width: 100%;
     height: 100%;
-    max-height: 125px;
+    max-height: 120px;
     border-radius: 20px 20px 0 0;
     image-rendering: pixelated;
     object-fit: cover;
 }
 .DescriptionHebergement
 {
-    padding: 10px;
+    padding: 5px;
 }
 
 /* ASIDE - LES PLUS POPULAIRES */
@@ -381,12 +386,14 @@ button
     justify-content: space-around;
     padding: 0 15px 0 15px;
     margin: 1%;
+    width: 30%;
 }
 .AsidePopulaire
 {
-    border: solid 1px yellow;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
 }
 .LesPlusPopulaires a
 {
@@ -395,18 +402,25 @@ button
     box-shadow: 0px 10px 20px 0px rgb(0 0 0 / 30%);
     border-radius: 20px;
     background-color: white;
-    box-sizing: content-box;
-    margin: 10px;
+    padding: 2px;
 }
 .PhotoHebergementPopulaire
 {
-    width: 45%;
+    width: 35%;
+    height: 100%;   
     image-rendering: pixelated;
     object-fit: cover;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
-
+.DescriptionHebergementPopulaire
+{
+    padding: 10px;
+}
+.EtoilesPopulaires
+{
+    margin-top: 45px;
+}
 
 /* FOOTER */
 footer
