@@ -32,11 +32,29 @@ h1
     font-family: "Raleway_SemiBold";
     margin: 1%;
 }
+
+    @media screen and (max-width: 425px)
+    {
+        h1
+        {
+            margin: 3%;
+        }
+    }
+
 h2
 {
     font-family: "Raleway_SemiBold";
     margin: 1%;
 }
+
+    @media screen and (max-width: 425px)
+        {
+            h2
+            {
+                margin: 3%;
+            }
+        }
+
 h3
 {
     font-family: "Raleway_SemiBold";
@@ -51,10 +69,6 @@ a
 {
     text-decoration: none;
     color: black;
-}
-.HeaderSmartphone
-{
-    display: none;
 }
 #BoutonRechercheSmartphone
 {
@@ -84,6 +98,23 @@ header
     width: 10%;
 }
 
+@media screen and (max-width: 425px)
+{
+    .Logo
+    {
+        width: 30%;
+        margin: 0px 0px -75px 15px;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px)
+{
+    .Logo
+    {
+        width: 20%;
+    }
+}
+
 /* NAV */
 nav
 {
@@ -92,6 +123,20 @@ nav
     align-items: center;
     margin: 1%;
 }
+
+    @media screen and (max-width: 425px)
+    {
+        nav
+        {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            justify-items: center;
+            width: 100%;
+            font-size: 22px;
+        }
+    }
+
 nav a
 {
     text-decoration: none;
@@ -106,23 +151,55 @@ nav a
     font-family: "Raleway_SemiBold";
 }
 
+    @media screen and (max-width: 425px)
+    {
+        .NavInscrire
+        {
+            grid-area: 1 / 2;
+            padding: 30px 0 0px 90px;
+        }
+        .NavHebergements
+        {
+            grid-area: 2 / 1;
+        }
+        .NavActivités
+        {
+            grid-area: 2 / 2;
+        }
+    }
+
 nav :hover
 {
 border-top: solid 2px #0065FC;
 }
 
+    @media screen and (max-width: 425px)
+    {
+        nav :hover
+        {
+            border-bottom: solid 2px #0065FC;
+            border-top: solid 2px transparent;
+        }
+    }
+
 /* FORM RECHERCHE */
-#Recherche
-{
-    margin: 2% 0 0 0;
-    padding: 10px 0px 10px 0px;
-    width: 21%;
-    display: flex;
-    flex-direction: row;
-    justify-content: stretch;
-    align-items: center;
-    font-family: "Raleway_Regular";
-}
+
+    @media screen and (max-width: 425px)
+    {
+        #BoutonRecherche
+        {
+        display: none;
+        }
+        #BoutonRechercheSmartphone
+        {
+            display: flex;
+            background-color: #007dc1;
+            color: #ffffff;
+            padding: 17px 17px;
+            border-radius: 0px 10px 10px 0;
+        }
+    }
+
 .fa-map-marker-alt:before
 {
     content: "\f3c5";
@@ -131,23 +208,51 @@ border-top: solid 2px #0065FC;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
+
+    @media screen and (max-width: 425px)
+    {
+        .fa-map-marker-alt:before
+        {
+            padding: 21px;
+        }
+    }
+
 form
 {
-    max-width: 1440px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     margin: 1%;
 }
+
+    @media screen and (max-width: 425px)
+        {
+            form
+            {
+               justify-content: center;
+               margin: 0;
+            }
+        }
+
 #Marseille
 {
-    padding: 12px 0 12px 12px;
+    padding: 20px 0 12px 12px;
     font-family: "Raleway_Bold";
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     border: solid 1px #F2F2F2;
     width: 25%;
 }
+
+    @media screen and (max-width: 425px)
+    {
+        #Marseille
+        {
+            width: 45%;
+            padding: 4%;
+        }
+    }
+
 #BoutonRecherche
 {
     background-color: #0065FC;
@@ -287,6 +392,14 @@ button
     image-rendering: pixelated;
     object-fit: cover;
 }
+
+    @media screen and (max-width: 636px)
+    {
+        .PhotoHebergement
+        {
+            height: 50%;
+        }
+    }
 .DescriptionHebergement
 {
     padding: 5px;
@@ -344,6 +457,7 @@ button
                 flex-wrap: wrap;
                 align-content: space-around;
                 justify-content: center;
+                flex-direction: initial;
             }
         }
 
@@ -413,6 +527,17 @@ button
     grid-row-gap: 0px;
     width: 100%;
 }
+
+    @media screen and (max-width: 768px)
+    {
+        .Activités
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
 .GrandePhotoActivité
 {
     width: 100%;
@@ -468,6 +593,15 @@ button
     height: auto;
     width: 100%;
 }
+
+    @media screen and (max-width: 768px)
+    {
+        .SectionActivitéIlesFrioul
+        {
+        margin: 0;
+        }
+    }
+
 .SectionActivitéParcNational
 {
     border-radius: 20px;
@@ -514,7 +648,6 @@ footer ul
 {
     line-height: 25px;
     list-style: none;
-    width: 20%;
-    padding: 0;
-    margin: 30px 150px 30px 30px;
+    width: 40%;
+    padding: 1%;
 }
