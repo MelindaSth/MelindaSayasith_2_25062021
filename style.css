@@ -213,7 +213,7 @@ border-top: solid 2px #0065FC;
     {
         .fa-map-marker-alt:before
         {
-            padding: 21px;
+            padding: 22px;
         }
     }
 
@@ -267,12 +267,20 @@ form
 /* DIV FILTRES + UL FILTRES */
 #Filtres
 {
-    max-width: 1440px;
     margin: 1%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
+
+    @media screen and (max-width: 425px)
+    {
+        #Filtres
+        {
+            flex-wrap: wrap;
+        }
+    }
+
 #ListeFiltres
 {
     display: flex;
