@@ -20,12 +20,14 @@
 *
 {
     text-decoration: none;
+    margin: 0%;
 }
 
 body
 {
     font-family: 'Raleway_Regular';
-    margin: 0;
+    margin: auto;
+    max-width: 2000px;
 }
 h1
 {   
@@ -92,25 +94,13 @@ header
 }
 
 /* LOGO RESERVIA */
-.Logo
-{
-    width: 10%;
-}
 
-@media screen and (max-width: 425px)
+@media screen and (max-width: 553px)
 {
     .Logo
     {
         width: 30%;
         margin: 0px 0px -75px 15px;
-    }
-}
-
-@media screen and (min-width: 426px) and (max-width: 768px)
-{
-    .Logo
-    {
-        width: 20%;
     }
 }
 
@@ -123,7 +113,7 @@ nav
     margin: 1%;
 }
 
-    @media screen and (max-width: 425px)
+    @media screen and (max-width: 553px)
     {
         nav
         {
@@ -142,6 +132,7 @@ nav a
     color: black;
     font-family: "Raleway_Regular";
     padding: 30px 30px 0 30px;
+    height: 40px;
 }
 
 .NavInscrire
@@ -150,20 +141,31 @@ nav a
     font-family: "Raleway_SemiBold";
 }
 
-    @media screen and (max-width: 425px)
+    @media screen and (max-width: 553px)
     {
         .NavInscrire
         {
             grid-area: 1 / 2;
-            padding: 30px 0 0px 90px;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            padding: 30px 0px 0 0px;
         }
         .NavHebergements
         {
             grid-area: 2 / 1;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 30px 0px 0 0px;
         }
         .NavActivités
         {
             grid-area: 2 / 2;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 30px 0px 0 0px;
         }
     }
 
@@ -172,7 +174,7 @@ nav :hover
 border-top: solid 2px #0065FC;
 }
 
-    @media screen and (max-width: 425px)
+    @media screen and (max-width: 553px)
     {
         nav :hover
         {
@@ -183,7 +185,7 @@ border-top: solid 2px #0065FC;
 
 /* FORM RECHERCHE */
 
-    @media screen and (max-width: 425px)
+    @media screen and (max-width: 700px)
     {
         #BoutonRecherche
         {
@@ -192,7 +194,7 @@ border-top: solid 2px #0065FC;
         #BoutonRechercheSmartphone
         {
             display: flex;
-            background-color: #007dc1;
+            background-color: #0065FC;
             color: #ffffff;
             padding: 17px 17px;
             border-radius: 0px 10px 10px 0;
@@ -224,26 +226,26 @@ form
     margin: 1%;
 }
 
-    @media screen and (max-width: 425px)
+    @media screen and (max-width: 768px)
+    {
+        form
         {
-            form
-            {
-               justify-content: center;
-               margin: 0;
-            }
+            justify-content: center;
         }
+    }
 
 #Marseille
 {
     padding: 20px 0 12px 12px;
     font-family: "Raleway_Bold";
     font-size: 20px;
-    text-align: center;
     border: solid 1px #F2F2F2;
     width: 25%;
+    min-width: 200px;
+    max-height: 59px;
 }
 
-    @media screen and (max-width: 425px)
+    @media screen and (max-width: 700px)
     {
         #Marseille
         {
@@ -261,6 +263,7 @@ form
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
     font-size: 25px;
+    border: none;
 }
 
 /* DIV FILTRES + UL FILTRES */
@@ -352,13 +355,13 @@ button
     justify-content: center;
 }
 
-@media screen and (max-width: 967px)
-{
-    #EnsembleHebergements   
+    @media screen and (max-width: 1000px)
     {
-       flex-wrap: wrap-reverse;
+        #EnsembleHebergements
+        {
+            flex-wrap: wrap-reverse;
+        }
     }
-}
 
 .AfficherPlus
 {
@@ -366,6 +369,15 @@ button
     font-family: 'Raleway_Bold';
     font-size: 20px;
 }
+
+@media screen and (max-width: 768px)
+{
+    .AfficherPlus
+    {
+        margin: 15% 0 5% 0;
+    }
+}
+
 
 /* ARTICLE HEBERGEMENTS A MARSEILLE */
 .TitreHebergementsMarseille
@@ -384,23 +396,20 @@ button
     width: 70%;
 }
 
-    @media screen and (max-width: 621px)
+    @media screen and (max-width: 1000px)
     {
         .Hebergements
         {
-            padding: 2%;
-            background-color: white;
-            border-radius: 0;
             width: 100%;
         }
-    }  
+    }
 
-    @media screen and (min-width: 622px) and (max-width: 967px)
+    @media screen and (max-width: 768px)
     {
         .Hebergements
         {
-            width: 100%;
-            padding: 2%;
+            background-color: white;
+            padding: 0;
         }
     }
 
@@ -412,15 +421,22 @@ button
     grid-row-gap: 5%;
 }
 
-@media screen and (max-width: 621px)
-{
-    .HebergementsMarseille
+    @media screen and (max-width: 768px)
     {
-        grid-template-columns: repeat(1, 90%);
-        grid-template-rows: repeat(6, 35%);
-        grid-row-gap: 1%;
+        .HebergementsMarseille
+        {
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
+        }
     }
-}
+
+    @media screen and (min-width: 320px) and (max-width:425px)
+    {
+        .HebergementsMarseille
+        {
+            grid-template-columns: 1fr;
+        }
+    }
 
 .HebergementsMarseille a 
 {
@@ -478,23 +494,11 @@ button
     width: 30%;
 }
 
-    @media screen and (min-width: 622px) and (max-width: 967px)
-        {
-            .LesPlusPopulaires
-            {
-                width: 100%;
-                padding: 2%;
-            }
-        }
-      
-    @media screen and (max-width: 621px)
+    @media screen and (max-width: 1000px)
     {
         .LesPlusPopulaires
         {
             width: 100%;
-            border-radius: 0;
-            padding: 2%;
-            margin: 5% 0 0 0;
         }
     }
 
@@ -504,24 +508,13 @@ button
     flex-direction: column;
 }
 
-@media screen and (max-width: 621px)
-{
-    .AsidePopulaire
+    @media screen and (max-width:1000px) 
     {
-        align-items: center;
-    }
-}
-
-@media screen and (min-width: 622px) and (max-width: 967px)
+        .AsidePopulaire 
         {
-            .AsidePopulaire
-            {
-                flex-wrap: wrap;
-                align-content: space-around;
-                justify-content: center;
-                flex-direction: initial;
-            }
+            align-items: center;
         }
+    }
 
 .LesPlusPopulaires a
 {
@@ -536,23 +529,16 @@ button
     max-height: 120px;
 }
 
-@media screen and (min-width: 622px) and (max-width: 967px)
+    @media screen and (max-width: 1000px)
+    {
+        .LesPlusPopulaires a 
         {
-            .LesPlusPopulaires a 
-            {
-                width: 45%;
-                height: 35%;
-            }
+            width: 100%;
+            max-width: 400px;
+            margin: 1%;
+            height: 120px;
         }
-
-@media screen and (max-width: 621px)
-        {
-            .LesPlusPopulaires a 
-            {
-                max-height: 100px;
-            }
-        }
-            
+    }            
 
 .PhotoHebergementPopulaire
 {
@@ -571,14 +557,6 @@ button
     align-self: center;
     padding: 5%;
 }
-
-    @media screen and (max-width: 967px)
-            {
-                .EtoilesPopulaires
-                {
-                    margin: 0;
-                }
-            }
 
 /* SECTION ACTIVITES */
 #ListeActivités 
@@ -605,9 +583,9 @@ button
     {
         .Activités
         {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            grid-template-columns: 96%;
+            grid-template-rows: repeat(6, 200px);
+            justify-content: center;
         }
     }
 
@@ -620,6 +598,15 @@ button
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
+
+    @media screen and (max-width: 768px)
+    {
+        .GrandePhotoActivité
+        {
+            height: 125px;
+        }
+    }
+
 .MoyennePhotoActivité
 {
     width: 100%;
@@ -629,6 +616,15 @@ button
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
+
+    @media screen and (max-width: 768px)
+    {
+        .MoyennePhotoActivité
+        {
+            height: 125px;
+        }
+    }
+
 .PetitePhotoActivité
 {
     width: 100%;
@@ -638,6 +634,15 @@ button
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
+
+    @media screen and (max-width: 768px)
+    {
+        .PetitePhotoActivité
+        {
+            height: 125px;
+        }
+    }
+
 .SectionActivitéVieuxPort
 {
     border-radius: 20px;
@@ -647,6 +652,17 @@ button
     width: 100%;
     height: auto;
 }
+
+    @media screen and (max-width: 768px)
+    {
+        .SectionActivitéVieuxPort
+        {
+            grid-area: 1 / 1;
+            margin: 0; 
+            height: fit-content; 
+        }
+    }
+
 .SectionActivitéFortPomegues
 {
     border-radius: 20px;
@@ -657,6 +673,17 @@ button
     width: 100%;
     height: auto;
 }
+
+@media screen and (max-width: 768px)
+{
+    .SectionActivitéFortPomegues
+    {
+        grid-area: 2 / 1;
+        margin: 0;
+        height: fit-content;
+    }
+}
+
 .SectionActivitéIlesFrioul
 {
     border-radius: 20px;
@@ -672,6 +699,8 @@ button
         .SectionActivitéIlesFrioul
         {
         margin: 0;
+        grid-area: 3 / 1;
+        height: fit-content;
         }
     }
 
@@ -684,6 +713,18 @@ button
     width: 100%;
     height: auto;
 }
+
+    @media screen and (max-width: 768px)
+    {
+        .SectionActivitéParcNational
+        {
+        grid-area: 4 / 1;
+        margin: 0;
+        height: fit-content;
+        }
+    }
+
+
 .SectionActivitéNotreDame
 {
     border-radius: 20px;
@@ -693,6 +734,17 @@ button
     height: fit-content;
     width: 100%;
 }
+
+    @media screen and (max-width: 768px)
+    {
+        .SectionActivitéNotreDame
+        {
+        grid-area: 5 / 1;
+        margin: 0;
+        height: fit-content;
+        }
+    }
+
 .SectionActivitéParcLongchamp
 {
     border-radius: 20px;
@@ -703,6 +755,17 @@ button
     width: 100%;
     height: auto;
 }
+
+    @media screen and (max-width: 768px)
+    {
+        .SectionActivitéParcLongchamp
+        {
+        grid-area: 6 / 1;
+        margin: 0;
+        height: fit-content;
+        }
+    }
+
 .NomActivité
 {
     margin: 1% 0 1% 0;
