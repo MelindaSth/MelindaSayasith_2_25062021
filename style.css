@@ -553,6 +553,7 @@ footer ul
         justify-content: center;
         align-items: flex-end;
         padding: 0 15px 15px 15px;
+        border-bottom: solid 2px #F2F2F2;
     }
     .NavHebergements:hover {border-bottom: solid 2px #0065FC;}
     .NavActivités
@@ -564,6 +565,7 @@ footer ul
         justify-content: center;
         align-items: flex-end;
         padding: 0 15px 15px 15px;
+        border-bottom: solid 2px #F2F2F2;
     }
     .NavActivités:hover {border-bottom: solid 2px #0065FC;}
     #Marseille {width : 85%;}
