@@ -48,7 +48,7 @@ a
     font-weight: bolder;
 }
 
-/* HEADER */
+/* HEADER : Il contient le <nav> géré dans les medias queries en fin de code */
 header
 {
     padding: 1%;
@@ -57,7 +57,7 @@ header
     flex-wrap: wrap;
 }
 
-/* FORM / RECHERCHE */
+/* FORM / BOUTON DE RECHERCHE */
 form
 {
     display: flex;
@@ -65,7 +65,7 @@ form
     max-width: 600px;
     margin: 5px;
 }
-.FormulaireIcone
+.IconLocalisation
 {
     width: 15%;
     height: 50px;
