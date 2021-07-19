@@ -48,7 +48,7 @@ a
     font-weight: bolder;
 }
 
-/* HEADER : Il contient le <nav> géré dans les medias queries en fin de code */
+/* HEADER */
 header
 {
     display: flex;
@@ -179,7 +179,7 @@ form
     margin: 1%;
 }
 
-/* DIV ENSEMBLE HEBERGEMENTS : ARTICLE HERBERGEMENTS A MARSEILLE + ASIDE POPULAIRES */
+/* DIV ENSEMBLE HEBERGEMENTS : SECTION HERBERGEMENTS A MARSEILLE + ASIDE POPULAIRES */
 #EnsembleHebergements
 {
     display: flex; justify-content: center;
@@ -189,7 +189,7 @@ form
     margin: 5% 0 1% 0; font-size: 20px;
 }
 
-/* ARTICLE HEBERGEMENTS A MARSEILLE */
+/* SECTION HEBERGEMENTS A MARSEILLE */
 .TitreHebergementsMarseille
 {
     margin: 2% 0 2% 0;
